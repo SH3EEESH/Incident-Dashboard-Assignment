@@ -23,7 +23,7 @@ function App() {
     
     // Super important rule here: you can't just push new items into React state
     // copies current list and loops any new list to current list ^v
-    setIncidents([incidents, { id, text }]);
+    setIncidents([...incidents, { id, text }]);
   };
 
   // This handles deleting a threat
