@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Header from './components/Header';
+import Incident from '.components/Incident';
 import Incidents from './components/Incidents';
 import AddIncident from './components/AddIncident';
 
@@ -11,7 +12,7 @@ function App() {
   // Creating the list of fake threats
   // Use setIncidents to tell React to redraw the screen
   const [incidents, setIncidents] = useState([
-    { id: 1, text: 'Unauthorized Login Attempt - IP: 192.168.1.45' },
+    { id: 1, text: 'Unauthorized Login Attempt - IP: 192.168.1.10' },
     { id: 2, text: 'Malware Signature Detected in /downloads' }
   ]);
 
