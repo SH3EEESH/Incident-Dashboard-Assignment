@@ -3,7 +3,7 @@ const Header = ({ title, activeView, setView }) => {
     return (
         <header>
             <h1>{title}</h1>
-            <p>Terminal Status: Active (awaiting user input)</p>
+            <p>Terminal Status: Active (Waiting for Detailed Threats)</p>
             
             {/* Buttons set up based off css*/}
             <div className="controls" style={{ justifyContent: 'center', marginTop: '15px' }}>

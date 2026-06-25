@@ -12,19 +12,19 @@ function App() {
   // Creating the list of fake threats
   // Use setIncidents to tell React to redraw the screen
   const [incidents, setIncidents] = useState([
-    { id: 1, text: 'Unauthorized Login Attempt - IP: 192.168.1.10' },
-    { id: 2, text: 'Malware Signature Detected in /downloads' }
+    { id: 1, text: 'Unauthorized Login Attempt - IP: 192.168.1.10', severity: 'High' },
+    { id: 2, text: 'Malware Signature Detected in /downloads', severity: 'Medium' }
   ]);
 
   // This is the function that actually adds a new threat to our list, DUH
   // Pass down to form so react can know what to do when user presses submit
-  const addIncident = (text) => {
+  const addIncident = (incidentData) => {
     // Just making up a random ID number since we aren't plugged into a real database yet
     const id = Math.floor(Math.random() * 10000); 
     
     // Super important rule here: you can't just push new items into React state
     // copies current list and loops any new list to current list ^v
-    setIncidents([...incidents, { id, text }]);
+    setIncidents([...incidents, { id, ...incidentData }]);
   };
 
   // This handles deleting a threat
@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       {/* Sending the state functions down into the Header so the buttons inside it actually do something */}
-      <Header title="CYBERSEC INCIDENT DASHBOARD" activeView={activeView} setView={setActiveView} />
+      <Header title="END-USER INCIDENT DASHBOARD" activeView={activeView} setView={setActiveView} />
 
       {/* This is the quick viewer 'manager' Basically checks: 'Hey, is the activeView currently 'dashboard'? If so, show the app. If not, show the system info box' */}
       {activeView === 'dashboard' ? (
