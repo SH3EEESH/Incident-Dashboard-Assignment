@@ -1,5 +1,5 @@
 const Incident = ({ incident, onDelete }) => {
-    
+
     // This is where the CSS Flexbox will be implemented so react knows what to make for INDIVIDUAL boxes
     return (
 

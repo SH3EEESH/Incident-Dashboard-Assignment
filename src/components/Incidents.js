@@ -21,3 +21,5 @@ const Incidents = ({ incidents, onDelete }) => {
     </>
   );
 };
+
+export default Incidents;

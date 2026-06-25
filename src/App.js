@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Header from './components/Header';
-import Incident from '.components/Incident';
+import Incident from './components/Incident';
 import Incidents from './components/Incidents';
 import AddIncident from './components/AddIncident';
 
